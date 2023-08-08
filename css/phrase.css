@@ -1,0 +1,167 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: all .5s ease;
+}
+a{
+    text-decoration: none;
+}
+/* Header */
+header {
+    width: 100%;
+    padding: 0 2rem;
+    /* margin: 0 2rem; */
+  }
+  
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: middle;
+    position: relative;
+  }
+  
+  header nav .logo-img img {
+    width: 200px;
+  }
+  
+  header nav .menu-btn {
+    transition: all .3s ease-in-out;
+  }
+  
+  header nav .menu-btn .hide {
+    display: none;
+  }
+  
+  header nav .menu-btn i {
+    font-size: 2rem;
+  }
+  
+  header nav .menu {
+    background-color: white;
+    width: 50%;
+    max-width: 400px;
+    transition: all .3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  header nav .menu ul {
+    list-style-type: none;
+    width: 100%;
+    text-align: right;
+    z-index: 1000;
+  }
+  
+  header nav .menu ul li {
+    padding: 1rem 2rem;
+    border-bottom: 1px solid black;
+    z-index: 1000;
+  }
+  
+  header nav .menu ul li a {
+    color: black;
+    z-index: 1000;
+  }
+/* Header */
+
+textarea{
+    resize: none;
+    outline: none;
+    padding: 1rem;
+    width: 100%;
+    height: 13rem;
+    border-radius: 5px;
+}
+form{
+    /* background: #3375BB; */
+    padding: 1rem;
+}
+
+.form_group{
+    text-align: center;
+    /* background: steelblue; */
+    position: relative;
+    width: 80%;
+    max-width: 40rem;
+    margin:1rem auto;
+}
+
+.form_group label{
+    position: absolute;
+    left: 1rem;
+    top: .5rem;
+    /* color: steelblue; */
+    padding: .5rem 3px;
+    background: white;
+    z-index: 2;
+    transition: all .5s ease;
+}
+
+#phrase:active + label,
+ #phrase:focus + label{
+    top: -1.1rem;
+    left: .9rem;
+}
+.form_group p{
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.form_group button{
+    margin: 1rem 0;
+    width: 100%;
+    height: 3rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: #f6851b;
+    color: white;
+}
+.hide{
+    display: none;
+}
+/* .parag,
+.warning{
+    text-align: center;
+} */
+.text-danger{
+    color: red;
+}
+
+
+@media screen and (min-width: 768px) {
+    header {
+      margin-bottom: 4rem;
+    }
+    header nav .menu-btn {
+      display: none;
+    }
+    header nav .menu {
+      display: block;
+    }
+    header nav .menu ul {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header nav .menu ul li {
+      padding: 0;
+      border-bottom: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header nav .menu {
+      position: absolute;
+      right: 0;
+      top: 3.5rem;
+      display: none;
+    }
+  }

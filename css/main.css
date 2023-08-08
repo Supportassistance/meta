@@ -1,0 +1,336 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  vertical-align: middle;
+  position: relative;
+}
+
+header nav .logo-img img {
+  width: 200px;
+}
+
+header nav .menu-btn {
+  transition: all .3s ease-in-out;
+}
+
+header nav .menu-btn .hide {
+  display: none;
+}
+
+header nav .menu-btn i {
+  font-size: 2rem;
+}
+
+header nav .menu {
+  background-color: white;
+  width: 50%;
+  max-width: 400px;
+  transition: all .3s ease-in-out;
+}
+
+header nav .menu ul {
+  list-style-type: none;
+  width: 100%;
+  text-align: right;
+}
+
+header nav .menu ul li {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid black;
+}
+
+header nav .menu ul li a {
+  color: black;
+}
+
+main section {
+  overflow: hidden;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all .3s ease-in-out;
+}
+
+main section .sect-text {
+  text-align: center;
+}
+
+main section .sect-text h1 {
+  font-size: 2.1rem;
+  line-height: 2.5rem;
+}
+
+main section .sect-text p {
+  padding: 1.5rem 0;
+}
+
+main section .sect-img {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+main section .sect-img img {
+  width: 100%;
+  max-width: 30rem;
+}
+
+main section:nth-child(2) p {
+  padding-bottom: 1rem;
+}
+
+main section:nth-child(2) a {
+  color: blue;
+}
+
+main section:nth-child(2) .sect-img {
+  width: 50%;
+}
+
+main section:nth-child(2) .sect-img img {
+  width: 100%;
+}
+
+main section:nth-child(6) {
+  height: 100%;
+}
+
+main section:nth-child(6) .bottom-banner {
+  margin-bottom: 5rem;
+  padding-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: black;
+}
+
+main section:nth-child(6) .bottom-banner img {
+  width: 12rem;
+  padding-bottom: 2rem;
+}
+
+main section:nth-child(6) .bottom-banner a {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+main section:nth-child(6) .bottom-banner p {
+  text-align: center;
+}
+
+main section:nth-child(6) h3 {
+  padding: 0 0 1rem 0;
+}
+
+main section:nth-child(3) .sect-img {
+  width: 20rem;
+  transform: translateX(200%);
+}
+
+main section:nth-child(4) .sect-img {
+  width: 20rem;
+  transform: translateX(-200%);
+}
+
+main section:nth-child(5) {
+  z-index: 1000;
+}
+
+main section:nth-child(5) .sect-img {
+  width: 20rem;
+  transform: translateX(200%);
+}
+
+main section:nth-child(6) {
+  height: 50rem;
+  text-align: center;
+}
+
+main section:nth-child(6) .bottom-banner .banner-img {
+  transform: translateY(-2000%);
+}
+
+footer .logos {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+footer .logos div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .logos div img {
+  width: 10rem;
+}
+
+footer .footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat {
+  position: fixed;
+  bottom: 4rem;
+  right: 2rem;
+  width: 40px;
+  height: 40px;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+/* For Desktop View */
+@media screen and (min-width: 768px) {
+  header {
+    margin-bottom: 4rem;
+  }
+  header nav .menu-btn {
+    display: none;
+  }
+  header nav .menu {
+    display: block;
+    width: 15rem;
+  }
+  header nav .menu ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header nav .menu ul li {
+    padding: 0;
+    border-bottom: none;
+  }
+  main section:nth-child(odd) {
+    width: 100%;
+    display: block;
+    min-height: 20rem;
+    max-height: 30rem;
+    height: 20rem;
+    padding-bottom: 0;
+  }
+  main section:nth-child(odd) .sect-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  main section:nth-child(odd) .sect-img {
+    height: 100%;
+    min-width: 35%;
+    max-width: 50%;
+    float: right;
+  }
+  main section:nth-child(odd) .sect-img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+  main section:nth-child(even) {
+    margin-top: 8rem;
+    width: 100%;
+    display: block;
+    min-height: 20rem;
+    max-height: 24rem;
+    height: 20rem;
+    text-align: center;
+  }
+  main section:nth-child(even) .sect-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+  }
+  main section:nth-child(even) .sect-img {
+    height: 100%;
+    min-width: 35%;
+    max-width: 50%;
+    float: left;
+  }
+  main section:nth-child(even) .sect-img img {
+    width: 100%;
+    height: auto;
+  }
+  main section:nth-child(1) {
+    min-height: 25rem;
+    max-height: 30rem;
+    height: 23rem;
+  }
+  main section:nth-child(2) .sect-img img {
+    width: 15rem;
+    height: auto;
+  }
+  main section:nth-child(6) {
+    min-height: 30rem;
+    max-height: 36rem;
+    height: 26rem;
+    margin-bottom: 4rem;
+  }
+  main section:nth-child(6) .bottom-banner {
+    margin-bottom: 4rem;
+    padding: 1rem;
+  }
+  main section:nth-child(6) .div-text {
+    margin: 0 auto;
+    width: 100%;
+    height: 4rem;
+    max-width: 60rem;
+  }
+  footer .logos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* For Tablet View */
+@media screen and (max-width: 768px) {
+  header nav .menu {
+    position: absolute;
+    right: 0;
+    top: 3.5rem;
+    display: none;
+  }
+}
+/*# sourceMappingURL=main.css.map */

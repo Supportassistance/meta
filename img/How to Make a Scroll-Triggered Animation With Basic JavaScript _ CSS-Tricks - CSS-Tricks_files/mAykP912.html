@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- saved from url=(0074)https://videopress.com/embed/mAykP912?cover=1&preloadContent=metadata&hd=1 -->
+<html style="background-color: transparent; overflow: hidden;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<meta name="robots" content="noindex">
+	<meta http-equiv="Cache-Control" content="no-cache">
+	<meta http-equiv="Pragma" content="no-cache">
+	<meta http-equiv="Expires" content="0">
+	<link rel="shortcut icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/d829502dd780a0215fe1fb6ba536d78c?s=32" sizes="16x16">
+	<link rel="icon" type="image/x-icon" href="https://secure.gravatar.com/blavatar/d829502dd780a0215fe1fb6ba536d78c?s=32" sizes="16x16">
+	<link rel="apple-touch-icon" href="https://secure.gravatar.com/blavatar/d829502dd780a0215fe1fb6ba536d78c?s=114">
+	<title>scrolltrigger-mp4</title></head>
+<body>
+<div id="video" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; height: 100%;"></div>
+<script>
+	if ( ! window.globalVideoPressArgs ) {
+		window.globalVideoPressArgs = {};
+	}
+	window.globalVideoPressArgs.isPrivate = false;
+	window.globalVideoPressArgs.translationData = window.globalVideoPressArgs.translationData || {"language":"en-US","languages":{"en-US":{", opens captions settings dialog":", opens captions settings dialog",", opens descriptions settings dialog":", opens descriptions settings dialog",", opens subtitles settings dialog":", opens subtitles settings dialog",", selected":", selected","A network error caused the media download to fail part-way.":"A network error caused the media download to fail part-way.","A network error occurred, check your connection and try again.":"A network error occurred, check your connection and try again.","Audio Player":"Audio Player","Audio Track":"Audio Track","Auto":"Auto","Autoplay":"Autoplay","Background":"Background","Beginning of dialog window. Escape will cancel and close the window.":"Beginning of dialog window. Escape will cancel and close the window.","Black":"Black","Blue":"Blue","Caption Settings Dialog":"Caption Settings Dialog","Captions":"Captions","Casual":"Casual","Chapter":"Chapter","Chapters":"Chapters","Close":"Close","Close Modal Dialog":"Close Modal Dialog","Content Unavailable":"Content Unavailable","Conversion failed.":"Conversion failed.","Copied":"Copied","Copy":"Copy","Current Time":"Current Time","Cyan":"Cyan","DD":"DD","Depressed":"Depressed","Descriptions":"Descriptions","Done":"Done","Download this video":"Download this video","Dropshadow":"Dropshadow","Duration":"Duration","Embed (HTML)":"Embed (HTML)","End of dialog window.":"End of dialog window.","Enter your birth date:":"Enter your birth date:","Error occurred":"Error occurred","Exit Fullscreen":"Exit Fullscreen","Exit Picture-in-Picture":"Exit Picture-in-Picture","Font Family":"Font Family","Font Size":"Font Size","Fullscreen":"Fullscreen","Go":"Go","Green":"Green","LIVE":"LIVE","Learn More":"Learn More","Learn more":"Learn more","Link":"Link","Loaded":"Loaded","Loading\u2026":"Loading\u2026","Loop":"Loop","MM":"MM","Magenta":"Magenta","Make sure you are signed in and a member of the site.":"Make sure you are signed in and a member of the site.","Modal Window":"Modal Window","Monospace Sans-Serif":"Monospace Sans-Serif","Monospace Serif":"Monospace Serif","Mute":"Mute","No compatible source was found for this media.":"No compatible source was found for this media.","No content":"No content","None":"None","Off":"Off","Opaque":"Opaque","Pause":"Pause","Picture-in-Picture":"Picture-in-Picture","Play":"Play","Play Video":"Play Video","Playback Rate":"Playback Rate","Progress":"Progress","Progress Bar":"Progress Bar","Proportional Sans-Serif":"Proportional Sans-Serif","Proportional Serif":"Proportional Serif","Quality":"Quality","Raised":"Raised","Red":"Red","Remaining Time":"Remaining Time","Replay":"Replay","Reset":"Reset","Script":"Script","Seek to live, currently behind live":"Seek to live, currently behind live","Seek to live, currently playing live":"Seek to live, currently playing live","Semi-Transparent":"Semi-Transparent","Settings Menu":"Settings Menu","Share Button":"Share Button","Small Caps":"Small Caps","Speed":"Speed","Start at {1}":"Start at {1}","Stream Type":"Stream Type","Subtitles":"Subtitles","Text":"Text","Text Edge Style":"Text Edge Style","The media could not be loaded, either because the server or network failed or because the format is not supported.":"The media could not be loaded, either because the server or network failed or because the format is not supported.","The media is encrypted and we do not have the keys to decrypt it.":"The media is encrypted and we do not have the keys to decrypt it.","The media playback was aborted due to a corruption problem or because the media used features your browser did not support.":"The media playback was aborted due to a corruption problem or because the media used features your browser did not support.","This is a modal window":"This is a modal window","This modal can be closed by pressing the Escape key or activating the close button.":"This modal can be closed by pressing the Escape key or activating the close button.","This video is private":"This video is private","This video might display mature content.":"This video might display mature content.","Transparent":"Transparent","Uniform":"Uniform","Unknown error":"Unknown error","Unmute":"Unmute","Video Player":"Video Player","Volume Level":"Volume Level","We are converting this video for optimal playback...":"We are converting this video for optimal playback...","White":"White","Window":"Window","YYYY":"YYYY","Yellow":"Yellow","You aborted the media playback":"You aborted the media playback","captions off":"captions off","captions settings":"captions settings","descriptions off":"descriptions off","descriptions settings":"descriptions settings","progress bar timing: currentTime={1} duration={2}":"progress bar timing: currentTime={1} duration={2}","restore all settings to the default values":"restore all settings to the default values","subtitles off":"subtitles off","subtitles settings":"subtitles settings","{1} is loading.":"{1} is loading."}}};
+	window.globalVideoPressArgs.overrideNativeHls = true;
+</script>
+<script src="./videopress-routes.min.js.download"></script>
+<script>
+	(function () {
+		var isEmbedded = window !== window.parent;
+		if ( isEmbedded ) {
+			return;
+		}
+
+		window.addEventListener( 'message', function ( event ) {
+			var allowed_origins = [ 'https://videopress.com', 'https://video.wordpress.com' ];
+			if ( -1 === allowed_origins.indexOf( event.origin ) ) {
+				return;
+			}
+
+			if ( event.data.event !== 'videopress_token_request' ) {
+				return;
+			}
+
+			var guid = event.data.guid;
+			var guid = event.data.guid;
+			var token = window.globalVideoPressArgs.authToken;
+			var isPrivate = window.globalVideoPressArgs.isPrivate;
+
+			if ( isPrivate && ! token ) {
+				event.source.postMessage(
+					{
+						event: 'videopress_token_error',
+							guid: guid,
+					},
+					'*'
+				);
+				return;
+			}
+
+			event.source.postMessage(
+				{
+					event: 'videopress_token_received',
+						guid: guid,
+						jwt: token,
+				},
+				'*'
+			);
+
+		} );
+	})();
+</script>
+
+
+</body></html>

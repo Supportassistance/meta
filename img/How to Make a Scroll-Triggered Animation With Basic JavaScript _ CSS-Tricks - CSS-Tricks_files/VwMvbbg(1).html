@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)https://cdpn.io/ShuvoK/fullembedgrid/VwMvbbg?animations=run&type=embed -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+
+
+  
+    <script src="./stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js.download"></script>
+
+
+  <title>CodePen - Pure JS scroll trigger with Intersection Observer</title>
+
+    <link rel="canonical" href="https://codepen.io/ShuvoK/pen/VwMvbbg">
+  
+  
+  
+  
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    padding: 1em;
+}
+.intro-text{
+    text-align: center;
+    font-size: 3em;
+    width: 0ch;
+    overflow: hidden;
+    margin: 0 auto;
+    white-space: nowrap;
+    background-image: linear-gradient(155deg, #fb7419, #bc1429, #319197);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.intro-text.active{
+    animation: typeIn 2s steps(28) forwards;
+}
+@keyframes typeIn {
+    to { width: 28ch; }
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: #64B6AC;
+    text-align: center;
+    line-height: 200px;
+    margin: 50em 0;
+    margin-left: calc(50% - 100px);
+    transition: transform 0.5s, opacity 0.5s;
+    color: #fff;
+    font-weight: bold;
+}
+.box.left{
+    transform: translateX(-200px);
+    opacity: 0;
+}
+.box.right{
+    transform: translateX(200px);
+    opacity: 0;
+    background-color: #473BF0;
+}
+.box.top{
+    transform: translateY(-200px) rotate(360deg);
+    opacity: 0;
+    background-color: #3D2645;
+}
+.box.bottom{
+    transform: translateY(200px) scaleX(3);
+    opacity: 0;
+    background: #EDE580;
+}
+.box.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.loader{
+    text-align: center;
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body translate="no">
+  <h1 class="intro-text">Scroll Down To Reveal Stuff!</h1>
+
+    <div class="scroll-reveal box left">
+        I came from left
+    </div>
+    <div class="scroll-reveal box right">
+        I came from right
+    </div>
+    <div class="scroll-reveal box top">
+        I came from top rotating
+    </div>
+    
+    <h1 class="loader">hello</h1>
+    
+    <div class="scroll-reveal box bottom">
+        I came from bottom scaled
+    </div>
+  
+      <script id="rendered-js">
+function scrollTrigger(selector, options = {}) {
+  let els = document.querySelectorAll(selector);
+  els = Array.from(els);
+  els.forEach(el => {
+    addObserver(el, options);
+  });
+}
+
+function addObserver(el, options) {
+  if (!('IntersectionObserver' in window)) {
+    if (options.cb) {
+      options.cb(el);
+    } else {
+      entry.target.classList.add('active');
+    }
+    return;
+  }
+  let observer = new IntersectionObserver((entries, observer) => {//this takes a callback function which receives two arguments: the elemts list and the observer instance
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (options.cb) {
+          options.cb(el);
+        } else {
+          entry.target.classList.add('active');
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+  observer.observe(el);
+}
+// Example usages:
+scrollTrigger('.intro-text');
+
+scrollTrigger('.scroll-reveal', {
+  rootMargin: '-200px' });
+
+
+scrollTrigger('.loader', {
+  rootMargin: '-200px',
+  cb: function (el) {
+    el.innerText = 'Loading...';
+    setTimeout(() => {
+      el.innerText = 'Task Complete!';
+    }, 1000);
+  } });
+//# sourceURL=pen.js
+    </script>
+
+  
+  <script src="./iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js.download"></script>
+
+
+
+</body></html>

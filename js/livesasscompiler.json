@@ -1,0 +1,24 @@
+{
+    "workbench.colorTheme": "Monokai Pro (Filter Machine)",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.productIconTheme": "material-product-icons",
+    "liveSassCompile.settings.forceBaseDirectory": "css",
+    "liveSassCompile.settings.formats": [
+
+
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "~../css",
+            "savePathReplacementPairs": null
+        }
+    ],
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    "liveSassCompile.settings.autoprefix": [
+    
+    ],
+    "git.openRepositoryInParentFolders": "never",
+    "liveSassCompile.settings.includeItems": [
+        
+    ]
+}
