@@ -144,6 +144,7 @@ form{
     }
     header nav .menu {
       display: block;
+      width: 15rem;
     }
     header nav .menu ul {
       height: 100%;
